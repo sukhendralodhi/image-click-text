@@ -3,7 +3,8 @@ const textArea = document.getElementById('res');
 
 images.forEach((img) => {
     img.addEventListener('click', (e) => {
-        console.log(e.target.alt);
-        textArea.value = `You click on ${e.target.alt}`;
-    })
-})
+        let value = e.target.alt;
+        // console.log(e.target.alt);
+        textArea.value = `You click on ${value.charAt(0).toUpperCase() + value.substring(1)}`;
+    });
+});
